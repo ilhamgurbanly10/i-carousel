@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I Notification</title>
+    <link rel="stylesheet" href="./i-notification.css">
+
+    <style>
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin: 1rem;
+        }
+
+        .btn {
+            background-color: blue;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            border: 5px;
+            margin-bottom: 1rem;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        @media (min-width: 1024px) {
+            .btn-group {
+                width: 400px;
+                margin: 1rem auto;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+
+    <div class="btn-group">
+
+        <h3>Notification</h3>
+        <button class="btn" onclick="iNotification('success', 'Success title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'top-left', null, 3000)">Open Notification Top Left</button>
+        <button class="btn" onclick="iNotification('error', 'Error title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'top-right', undefined, 4000)">Open Notification Top Right</button>
+        <button class="btn" onclick="iNotification('warning', 'Warning title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', 'bottom-left', null, 5000)">Open Notification Bottom Left</button>
+        <button class="btn" onclick="iNotification('info', 'Info title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', 'bottom-right', undefined, 6000)">Open Notification Bottom Right</button>
+    </div>
+     
+    <script src="i-notification.js"></script>
+
+</body>
+</html>
