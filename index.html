@@ -39,14 +39,25 @@
 <body>
 
     <div class="btn-group">
-
         <h3>Notification</h3>
-        <button class="btn" onclick="iNotification('success', 'Success title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'top-left', null, 3000)">Open Notification Top Left</button>
-        <button class="btn" onclick="iNotification('error', 'Error title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', 'top-right', undefined, 4000)">Open Notification Top Right</button>
-        <button class="btn" onclick="iNotification('warning', 'Warning title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', 'bottom-left', null, 5000)">Open Notification Bottom Left</button>
-        <button class="btn" onclick="iNotification('info', 'Info title', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', 'bottom-right', undefined, 6000)">Open Notification Bottom Right</button>
+        <button class="btn" onclick="iNotification({type: 'success', title: 'Success title', mes: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', position: 'top-left', time: 3000, progress: true})">Open Notification Top Left</button>
+        <button class="btn" onclick="iNotification({type: 'error', title: 'Error title', mes: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', position: 'top-right', time: 4000, progress: true})">Open Notification Top Right</button>
+        <button class="btn" onclick="iNotification({type: 'warning', title: 'Warning title', mes: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', position: 'bottom-left', time: 5000, progress: true})">Open Notification Bottom Left</button>
+        <button class="btn" onclick="iNotification({type: 'info', title: 'Info title', mes: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', position: 'bottom-right', time: 6000, progress: true})">Open Notification Bottom Right</button>
+
+        <div>
+            <p>1 - type - type of notification, success, error, info, warning (default: success)</p>
+            <p>2 - title - text, title of notification (is required)</p>
+            <p>3 - mes - text, message of notification</p>
+            <p>4 - position - position, top-right, top-left, bottom-left, bottom-right (default: top-right)</p>
+            <p>5 - icon - string, icon of notification (default: due to type)</p>
+            <p>6 - time - notification duration in milliseconds (default: 4000)</p>
+            <p>7 - progress - true/false, to show progress line (default: true)</p>
+        </div>
     </div>
-     
+    
+    
+
     <script src="i-notification.js"></script>
 
 </body>

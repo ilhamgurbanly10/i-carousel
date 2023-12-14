@@ -124,3 +124,41 @@ body {
 .i-notification-warning .i-notification-icon {
     color: #FF9800;
 }
+
+.i-notification-progress {
+    height: 2px;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.i-notification-success .i-notification-progress {
+    background-color: #4CAF50;
+}
+
+.i-notification-error .i-notification-progress {
+    background-color: #F44336;
+}
+
+.i-notification-info .i-notification-progress {
+    background-color: #2196F3;
+}
+
+.i-notification-warning .i-notification-progress {
+    background-color: #FF9800;
+}
+
+@keyframes progressAnimation {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+  
+
+.i-notification-show:not(.i-notification-hovered) .i-notification-progress {
+    animation: progressAnimation ease-in-out;
+}
