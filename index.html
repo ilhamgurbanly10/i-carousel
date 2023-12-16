@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I Notification</title>
-    <link rel="stylesheet" href="./i-notification.css">
+    <title>I Carousel</title>
+    <link rel="stylesheet" href="./i-carousel.css">
 
     <style>
 
@@ -38,27 +38,64 @@
 </head>
 <body>
 
-    <div class="btn-group">
-        <h3>Notification</h3>
-        <button class="btn" onclick="iNotification({type: 'success', title: 'Success title', mes: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', position: 'top-left', time: 3000, progress: true})">Open Notification Top Left</button>
-        <button class="btn" onclick="iNotification({type: 'error', title: 'Error title', mes: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.', position: 'top-right', time: 4000, progress: true})">Open Notification Top Right</button>
-        <button class="btn" onclick="iNotification({type: 'warning', title: 'Warning title', mes: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', position: 'bottom-left', time: 5000, progress: true})">Open Notification Bottom Left</button>
-        <button class="btn" onclick="iNotification({type: 'info', title: 'Info title', mes: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry', position: 'bottom-right', time: 6000, progress: true})">Open Notification Bottom Right</button>
+   <section class="">
 
-        <div>
-            <p>1 - type - type of notification, success, error, info, warning (default: success)</p>
-            <p>2 - title - text, title of notification (is required)</p>
-            <p>3 - mes - text, message of notification</p>
-            <p>4 - position - position, top-right, top-left, bottom-left, bottom-right (default: top-right)</p>
-            <p>5 - icon - string, icon of notification (default: due to type)</p>
-            <p>6 - time - notification duration in milliseconds (default: 4000)</p>
-            <p>7 - progress - true/false, to show progress line (default: true)</p>
+    <div class="i-carousel i-carousel-overlay" i-infinite>
+
+        <div class="i-carousel-item i-show" style="background-image: url('./images/item-01.avif');">
+            <div class="i-carousel-content i-carousel-content-top">
+                <h2 class="i-carousel-title">Carousel 01 Title</h2>
+                <p class="i-carousel-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            </div>
         </div>
+
+        <div class="i-carousel-item" style="background-image: url('./images/item-02.jpg');">
+            <div class="i-carousel-content i-carousel-content-left">
+                <h2 class="i-carousel-title">Carousel 02 Title</h2>
+                <p class="i-carousel-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            </div>
+        </div>
+
+        <div class="i-carousel-item" style="background-image: url('./images/item-03.jpg');">
+            <div class="i-carousel-content i-carousel-content-right">
+                <h2 class="i-carousel-title">Carousel 03 Title</h2>
+                <p class="i-carousel-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            </div>
+        </div>
+
+        <div class="i-carousel-item" style="background-image: url('./images/item-04.png');">
+            <div class="i-carousel-content i-carousel-content-bottom">
+                <h2 class="i-carousel-title">Carousel 04 Title</h2>
+                <p class="i-carousel-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. </p>
+            </div>
+        </div>
+
+        <button type="button" class="i-carousel-arrow i-carousel-prev"><svg viewBox="64 64 896 896" focusable="false" data-icon="left" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 000 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z"></path></svg></button>
+        <button type="button" class="i-carousel-arrow i-carousel-next"><svg viewBox="64 64 896 896" focusable="false" data-icon="right" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z"></path></svg></button>
+
+        <div class="i-carousel-dots">
+            <ul class="i-carousel-dots-list">
+                <li class="i-carousel-dots-item">
+                    <button type="button" class="i-carousel-dots-dot active"></button>
+                </li>
+                <li class="i-carousel-dots-item">
+                    <button type="button" class="i-carousel-dots-dot"></button>
+                </li>
+                <li class="i-carousel-dots-item">
+                    <button type="button" class="i-carousel-dots-dot"></button>
+                </li>
+                <li class="i-carousel-dots-item">
+                    <button type="button" class="i-carousel-dots-dot"></button>
+                </li>
+            </ul>
+        </div>
+
     </div>
-    
+
+   </section>
     
 
-    <script src="i-notification.js"></script>
+    <script src="./i-carousel.js"></script>
 
 </body>
 </html>
