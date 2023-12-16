@@ -45,11 +45,6 @@ const iCarousel = () => {
                 if (i === 1) disablePrev();
             }
         }
-        
-        // text animasiyalar add etmel hazir css ile
-        // text animasiyalar add etmel hazir css ile
-        // kecid add etmek olar
-        // silende isleyib-islememesini yoxla
 
         const next = () => {
             const nextIndex = activeIndex < length ? activeIndex + 1 : 1;
