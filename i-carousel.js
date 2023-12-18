@@ -9,7 +9,29 @@ const iCarousel = () => {
         const dots = el.querySelectorAll('.i-carousel-dots-dot');
         const length = items.length;
         const isInifinte = el.hasAttribute('i-infinite');
+        const autoplay = el.hasAttribute('i-autoplay');
+        const pauseOnHover = el.hasAttribute('i-pause-on-hover');
+        const autoplaySpeed = Number(el.getAttribute('i-autoplay-speed')) || 4000;
         let activeIndex = null;
+        let interval = null;
+        
+        const play = () => {
+            interval = setInterval(() => {
+                next();
+            }, autoplaySpeed)
+        }
+
+        const pause = () => {
+            clearInterval(interval);
+        }
+
+        const refreshPlay = () => {
+            if (autoplay && !pauseOnHover) { 
+                pause(); 
+            setTimeout(() => {
+                play();
+            }, 100)}
+        }
 
         const setDatas = () => { 
             items.forEach((item, i) => { 
@@ -32,6 +54,7 @@ const iCarousel = () => {
                 item.getAttribute('data-index') == dataIndex ? item.classList.add('i-show') : item.classList.remove('i-show');
             })
             activeIndex = dataIndex;
+            refreshPlay();
         }
 
         const toItemOnClickDot = (e) => {
@@ -103,6 +126,13 @@ const iCarousel = () => {
         })
 
         setDatas();
+        if (autoplay) { 
+            play();
+            if (pauseOnHover) {
+                el.addEventListener('mouseenter', () => {  pause(); })
+                el.addEventListener('mouseleave', () => { play(); })
+            }
+        }
     }
 
     carousels.forEach((item) => { carousel(item); })

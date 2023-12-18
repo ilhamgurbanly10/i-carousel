@@ -7,32 +7,6 @@
     <link rel="stylesheet" href="./i-carousel.css">
 
     <style>
-
-        .btn-group {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin: 1rem;
-        }
-
-        .btn {
-            background-color: blue;
-            color: white;
-            padding: 1rem;
-            text-align: center;
-            border: 5px;
-            margin-bottom: 1rem;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        @media (min-width: 1024px) {
-            .btn-group {
-                width: 400px;
-                margin: 1rem auto;
-            }
-        }
         
     </style>
 </head>
@@ -40,7 +14,7 @@
 
    <section class="">
 
-    <div class="i-carousel i-carousel-overlay" i-infinite>
+    <div class="i-carousel i-carousel-overlay" i-infinite i-autoplay i-autoplay-speed="5000" i-pause-on-hover>
 
         <div class="i-carousel-item i-show" style="background-image: url('./images/item-01.avif');">
             <div class="i-carousel-content i-carousel-content-top">
@@ -93,6 +67,15 @@
     </div>
 
    </section>
+
+   <ul>
+    <li>i-carousel-overlay: class for carousel overlay</li>
+    <li>i-carousel-content-top/right/bottom/left: classes for content animation</li>
+    <li>i-infinite: attribute for infinite carousel</li>
+    <li>i-autoplay: attribute for autoplay</li>
+    <li>i-autoplay-speed: attribute for autoplay speed in milliseconds.Default is 4000</li>
+    <li>i-pause-on-hover: attribute for make pause autoplay on hover carousel</li>
+</ul>
     
 
     <script src="./i-carousel.js"></script>
